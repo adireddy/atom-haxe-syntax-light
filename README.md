@@ -1,4 +1,4 @@
-# haxe-syntax-light theme
+# Haxe Syntax Theme
 
 A light syntax theme customized for Haxe.
 
