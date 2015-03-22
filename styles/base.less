@@ -1,9 +1,5 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
-// for a full listing of what's available.
-@import "ui-variables";
 @import "colors";
+@import "syntax-variables";
 
 .editor-colors {
   background-color: @white;
@@ -40,29 +36,37 @@
   border: 1px solid @blue;
 }
 
+.hxml {
+    .keyword { color: @dark_red; font-weight: bold; }
+}
+
 .haxe {
     .comment {
       color: @comment;
-      font-style: normal; }
+      font-style: italic; }
 
     .entity { color: @blue_tag; }
 
-    .storage.type.package { color: @dark_orange; }
+    .storage.type.package { color: @violet; font-weight: bold; font-style: italic; }
 
     .storage.type.import { color: @turquoise; font-weight: bold;}
 
-    .storage.type.class { color: @blue_text; }
+    .storage.type.class { color: @purple; }
 
     .storage.modifier { color: @dark_blue; }
 
     .keyword.other { color: @dark_red; font-weight: bold; }
+
+    .punctuation.terminator { color: @dark_red; }
+
+    .keyword.operator.assignment { color: @purple_dark; }
 
     //.meta.scope.field-completions { color: @dark_red; }
 
     .constant { color: @red;
 
       &.numeric,
-      &.boolean { color: @turquoise; }
+      &.boolean { color: @light_purple; }
 
     }
 
@@ -89,4 +93,120 @@
 
       }
     }
+}
+
+// CSS
+
+.css {
+
+  .entity { color: @blue; }
+
+  .property-name { color: @red; }
+
+  .variable { color: @green; }
+
+  .constant,
+  .unit {
+    color: @purple;
+    background-color: @light_purple;
+    border-radius: 3px; }
+
+  .quoted { color: @orange; }
+
+}
+
+// HTML
+.html,
+.xml{
+
+  .tag { color: @blue; }
+
+  .entity { color: @blue_tag;
+
+    &.name {
+      background-color: @light_blue;
+      border-radius: 3px; }
+
+  }
+
+  .comment { color: @comment; }
+
+  .attribute-name { color: @blue; }
+
+  .quoted { color: @red;
+
+    .punctuation { color: @dark_blue; }
+
+  }
+
+  .js .quoted { color: @orange; }
+
+}
+
+// Markdown
+.gfm {
+
+  .link {
+    color: @black;
+    font-weight: bold;
+
+    .entity {
+      color: @orange;
+      font-weight: normal; }
+
+    .link {
+      color: @green;
+      font-weight: normal; }
+
+  }
+
+  .heading {
+    font-weight: bold;
+    color: @black; }
+
+  .list,
+  .hr { color: @red; }
+
+  .quote {
+    font-style: italic;
+    color: @dark_blue; }
+
+  .raw { color: @purple;
+
+    .support {
+      color: @red;
+      font-weight: bold; }
+
+  }
+
+}
+
+// JSON
+.json {
+
+  .punctuation { color: @gray_dark;
+
+    &.separator { color: red; }
+
+  }
+
+  .quoted {
+    color: @dark_blue;
+    background-color: @light_blue;
+    border-radius: 3px;  }
+
+  .constant {
+    color: @purple;
+    background-color: @light_purple;
+    border-radius: 3px;  }
+
+}
+
+// YAML
+.yaml {
+
+  .entity.name { background-color: @light_blue; }
+
+  .string .punctuation { color: @gray; }
+
 }

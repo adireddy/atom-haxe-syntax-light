@@ -1,9 +1,9 @@
 {
   "name": "haxe-syntax-light",
   "theme": "syntax",
-  "version": "0.0.0",
-  "description": "Haxe light syntax theme.",
-  "repository": "https://github.com/atom/atom-haxe-syntax-light",
+  "version": "0.0.1",
+  "description": "Haxe light syntax theme for Atom.",
+  "repository": "https://github.com/adireddy/atom-haxe-syntax-light",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
