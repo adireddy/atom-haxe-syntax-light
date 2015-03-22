@@ -1,0 +1,92 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "colors";
+
+.editor-colors {
+  background-color: @white;
+  color: @gray_dark; }
+
+.editor {
+  font-family: 'Espresso Mono', Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+
+  .invisible-character,
+  .indent-guide { color: @gray_light2; }
+
+  .gutter { background-color: @gutter; }
+
+  .gutter .line-number { opacity: 1; color: @gutter_text; }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after { color: @gutter_text; }
+
+  .cursor { border-color: @cursor; }
+
+  .selection .region {
+    background-color: @selection;
+    // border: 1px solid @light_blue_border;
+    border-radius: 2px; }
+
+  .line-number.cursor-line-no-selection { background-color: @gutter_highlight; }
+
+}
+
+.bracket-matcher {
+  background-color: @light_blue;
+  border-radius: 2px;
+  border: 1px solid @blue;
+}
+
+.haxe {
+    .comment {
+      color: @comment;
+      font-style: normal; }
+
+    .entity { color: @blue_tag; }
+
+    .storage.type.package { color: @dark_orange; }
+
+    .storage.type.import { color: @turquoise; font-weight: bold;}
+
+    .storage.type.class { color: @blue_text; }
+
+    .storage.modifier { color: @dark_blue; }
+
+    .keyword.other { color: @dark_red; font-weight: bold; }
+
+    //.meta.scope.field-completions { color: @dark_red; }
+
+    .constant { color: @red;
+
+      &.numeric,
+      &.boolean { color: @turquoise; }
+
+    }
+
+    .variable { color: @dark_red; }
+
+    .delimiter, .brace { color: @black; }
+
+    .delimiter.period { color: @green; }
+
+    .invalid.deprecated {
+      text-decoration: underline;
+      color: @red; }
+
+    .invalid.illegal { color: @red; }
+
+    .string { color: @red;
+
+      .constant.character.escape { color: @red; }
+
+      &.regexp { color: @turquoise;
+
+        .source.ruby.embedded,
+        .string.regexp.arbitrary-repitition { color: @red; }
+
+      }
+    }
+}
